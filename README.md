@@ -26,7 +26,7 @@ Projeto desenvolvido com Vite.js [Veja a documentação oficial](https://vitejs.
 
 ## Funcionalidades
 
-- Consumo API Rest
+- Consumo de API utilizando Fetch
 - Busca de usuário por nome
 - Responsivo a todos os tamanhos de tela
 
