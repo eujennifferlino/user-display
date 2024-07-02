@@ -10,6 +10,9 @@ module.exports = {
         background: "#F0F4FF",
         text: "#444444",
       },
+      fontFamily: {
+        sans: ["Poppins", "sans-serif"],
+      },
     },
   },
   plugins: [],
