@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import Sidebar from "./components/Sidebar";
+import Header from "./components/Header";
+import UserCard from "./components/UserCard";
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -14,14 +17,6 @@ function App() {
       });
   }, []);
 
-  if (loading) {
-    return (
-      <div className="flex justify-center items-center h-screen">
-        Loading...
-      </div>
-    );
-  }
-
   const filteredUsers = users.filter(
     (user) =>
       user.firstName.toLowerCase().includes(search.toLowerCase()) ||
@@ -29,25 +24,23 @@ function App() {
   );
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Lista de Usuários</h1>
-      <input
-        type="text"
-        className="mb-4 p-2 border rounded"
-        placeholder="Buscar usuários..."
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {filteredUsers.map((user) => (
-          <div key={user.id} className="border p-4 rounded shadow">
-            <h2 className="text-xl font-bold">
-              {user.firstName} {user.lastName}
-            </h2>
-            <p>Email: {user.email}</p>
-            <p>Phone: {user.phone}</p>
-          </div>
-        ))}
+    <div className="flex h-screen bg-background">
+      <Sidebar />
+      <div className="flex flex-col flex-1">
+        <Header search={search} setSearch={setSearch} />
+        <main className="p-4 overflow-y-auto">
+          {loading ? (
+            <div className="flex justify-center items-center h-full text-primary">
+              Loading...
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {filteredUsers.map((user) => (
+                <UserCard key={user.id} user={user} />
+              ))}
+            </div>
+          )}
+        </main>
       </div>
     </div>
   );
