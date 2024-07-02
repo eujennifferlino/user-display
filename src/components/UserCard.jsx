@@ -5,7 +5,7 @@ const UserCard = ({ user }) => (
     <h2 className="text-xl font-bold text-secondary">
       {user.firstName} {user.lastName}
     </h2>
-    <p className="text-text">Email: {user.email}</p>
+    <p className="text-text break-all">Email: {user.email}</p>
     <p className="text-text">Phone: {user.phone}</p>
   </div>
 );
