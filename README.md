@@ -66,8 +66,8 @@ Inicie o servidor
 
 |                 |                                                                   Telas App                                                                                |
 |-----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|      Tela principal       | <img src="https://github.com/eujennifferlino/user-display/assets/111028742/94a648f3-121d-4644-9aa8-5201d0937684.png" alt="tela home" >|
-|      Busca usuários     | <img src="https://github.com/eujennifferlino/user-display/assets/111028742/a1e15188-903d-4dca-b6da-a54abfd68419.png" alt="tela carrinho" > |  
+|      Tela principal       | <img width="1440" alt="Home Page" src="https://github.com/eujennifferlino/user-display/assets/111028742/94a648f3-121d-4644-9aa8-5201d0937684">|
+|      Busca usuários     | <img width="1440" alt="Busca" src="https://github.com/eujennifferlino/user-display/assets/111028742/a1e15188-903d-4dca-b6da-a54abfd68419"> |  
 
 
 ---
